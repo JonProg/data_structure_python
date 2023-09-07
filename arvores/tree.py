@@ -21,6 +21,7 @@ class BinaryTree:
         else:
             self.root = None
 
+
     def simetric_traversal(self, node=None):
         if node is None:
             node = self.root
@@ -32,6 +33,7 @@ class BinaryTree:
             self.simetric_traversal(node.right)
             print(')', end='')
     
+
     def postorder_traversal(self, node=None):
         if node is None:
             node = self.root
@@ -41,6 +43,7 @@ class BinaryTree:
             self.postorder_traversal(node.right)
         print(node)
     
+
     def height(self, node=None):
         if node is None:
             node = self.root
@@ -54,6 +57,7 @@ class BinaryTree:
             return hright + 1
         return hleft + 1
 
+
     def inorder_traversal(self, node=None):
         if node is None:
             node = self.root
@@ -62,6 +66,7 @@ class BinaryTree:
         print(node, end=' ')
         if node.right:
             self.inorder_traversal(node.right)
+
 
     def levelorder_traversal(self, node=ROOT):
         if node == ROOT:
@@ -76,6 +81,7 @@ class BinaryTree:
             if node.right:
                 queue.push(node.right)
             print(node, end=" ")
+
 
 class BinarySearchTree(BinaryTree):
     
